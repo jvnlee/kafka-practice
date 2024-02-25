@@ -4,4 +4,6 @@
 
 &nbsp;
 
-[KafkaProducer의 내부 메커니즘](./notes/1_KafkaProducer의_내부_메커니즘.md)
+### 1. Kafka Producer의 내부 메커니즘
+
+[1-1. 레코드 전송 프로세스](./notes/1_KafkaProducer의_내부_메커니즘_01.md)
