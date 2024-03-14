@@ -6,6 +6,10 @@
 
 ### 1. Kafka Producer의 내부 메커니즘
 
-[1-1. 레코드 전송 프로세스](./notes/1_KafkaProducer의_내부_메커니즘_01.md)
+[1-1. Producer의 레코드 전송 프로세스](./notes/1_1_Producer의_레코드_전송_프로세스.md)
 
-[1-2. acks 옵션에 따른 전송 방식](./notes/1_KafkaProducer의_내부_메커니즘_02.md)
+[1-2. send 메서드의 내부 동작](./notes/1_2_send_메서드의_내부_동작.md)
+
+[1-3. Producer 옵션 설정](./notes/1_3_Producer_옵션_설정.md)
+
+[1-4. 메시지 전송 보장 방식](./notes/1_4_메시지_전송_보장_방식.md)
