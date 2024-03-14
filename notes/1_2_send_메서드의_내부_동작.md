@@ -1,4 +1,4 @@
-# 1. KafkaProducer의 내부 메커니즘
+# 1. KafkaProducer
 
 ## 1-2.️ `send()` 메서드의 내부 동작
 

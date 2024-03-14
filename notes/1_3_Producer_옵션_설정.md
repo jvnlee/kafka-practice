@@ -1,4 +1,4 @@
-# 1. KafkaProducer의 내부 메커니즘
+# 1. KafkaProducer
 
 ## 1-3. Producer 옵션 설정
 

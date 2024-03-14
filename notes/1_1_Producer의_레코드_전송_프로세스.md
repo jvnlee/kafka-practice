@@ -1,4 +1,4 @@
-# 1. KafkaProducer의 내부 메커니즘
+# 1. KafkaProducer
 
 ## 1-1. Producer의 레코드 전송 프로세스
 
