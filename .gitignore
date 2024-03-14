@@ -1,3 +1,4 @@
 /.gradle
 /.idea/
-/producers/build
+/**/build
+/**/out
