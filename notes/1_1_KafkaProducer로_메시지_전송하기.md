@@ -1,6 +1,6 @@
 # 1. KafkaProducer
 
-## 1-1. Producer의 레코드 전송 프로세스
+## 1-1. KafkaProducer로 메시지 전송하기
 
 ### 1) KafkaProducer 인스턴스 생성
 
@@ -9,7 +9,7 @@
 ```java
 // KafkaProducer 환경 설정
 Properties props = new Properties();
-props.setProperty(BOOTSTRAP_SERVERS_CONFIG, "192.168.56.101:9092"); // Broker 주소 (예시는 하나지만, 보통은 여러개)
+props.setProperty(BOOTSTRAP_SERVERS_CONFIG, "x.x.x.x:9092"); // Broker 주소 (예시는 하나지만, 보통은 여러개)
 props.setProperty(KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName()); // 레코드 key 직렬화에 사용할 Serializer 클래스
 props.setProperty(VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName()); // 레코드 value 직렬화에 사용할 Serializer 클래스
 
@@ -72,5 +72,10 @@ public class ProducerRecord<K, V> {
 생성해놓은 `ProducerRecord` 인스턴스를 producer의 `send()` 메서드의 파라미터로 전달
 
 ```java
-kafkaProducer.send(producerRecord);
+kafkaProducer.send(producerRecord, (metadata, exception) -> { ... });
 ```
+> `send()`는 일반적으로 성능을 위해 블락킹이 발생하지 않는 비동기 방식을 사용함. (자세한 내용은 [다음 챕터](./1_2_send_메서드의_내부_동작.md) 참고)
+> 
+> 따라서 메시지를 보내놓고, Broker로부터 받아야 할 metadata와 예외 정보가 담긴 응답을 기다리지 않고 다음 작업으로 넘어감.
+> 
+> 두번째 인자로 들어가는 콜백은 나중에 Broker로부터 응답이 오면 해당 데이터를 처리하는 용도임.

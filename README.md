@@ -6,7 +6,7 @@
 
 ### 1. Kafka Producer
 
-[1-1. Producer의 레코드 전송 프로세스](./notes/1_1_Producer의_레코드_전송_프로세스.md)
+[1-1. KafkaProducer로 메시지 전송하기](./notes/1_1_KafkaProducer로_메시지_전송하기.md)
 
 [1-2. send 메서드의 내부 동작](./notes/1_2_send_메서드의_내부_동작.md)
 
